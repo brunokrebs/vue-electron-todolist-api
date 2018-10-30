@@ -2,9 +2,13 @@ const express = require("express");
 var jwt = require("express-jwt");
 var jwks = require("jwks-rsa");
 const env = require("./env");
+var cors = require('cors');
 
 // App
 const app = express();
+
+//Use cors
+app.use(cors());
 
 // Set port
 const port = process.env.PORT || "1337";
